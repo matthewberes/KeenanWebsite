@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="banner-container">
+    <div class="banner-container" (wheel)="onBannerWheel($event)">
         <ng-container *ngIf="showBanner1">
             <div class="banner-1">
                 <div class="banner-1-inner">

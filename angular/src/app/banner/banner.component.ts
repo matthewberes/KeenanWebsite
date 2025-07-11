@@ -12,6 +12,7 @@ export class BannerComponent {
   showBanner2 = false;
   showBanner3 = false;
   currBanner = 1;
+  isChangingBanner = false;
 
   changeBanner(value: string) {
     switch (value) {
@@ -53,6 +54,19 @@ export class BannerComponent {
             break;
         }
         break;
+    }
+  }
+
+  onBannerWheel(event: WheelEvent) {
+    if (this.isChangingBanner) return;
+    if (event.deltaX > 30) {
+      this.isChangingBanner = true;
+      this.changeBanner('next');
+      setTimeout(() => this.isChangingBanner = false, 400);
+    } else if (event.deltaX < -30) {
+      this.isChangingBanner = true;
+      this.changeBanner('back');
+      setTimeout(() => this.isChangingBanner = false, 400);
     }
   }
 }

@@ -43,10 +43,22 @@ p {
     margin: 0;
 }
 
+.search-overlay {
+    position: fixed;
+    top: 130px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 130px);
+    background: rgba(81, 122, 191, 0.4);
+    z-index: 1000;
+}
+
 .search-container {
-    margin: 15px auto;
+    z-index: 1001;
+    margin: 20px auto;
     width: 70%;
     display: flex;
+
 }
 
 .boxes {
@@ -63,11 +75,13 @@ p {
     font-size: 12pt;
     display: flex;
     height: 35px;
-    margin: 10px 10px 0px;
+    margin: 8px 50px 0px;
+    box-sizing: border-box;
 }
 
 .search-box input {
     width: 90%;
+    margin: 0px 0px 0px 3px;
     border: none;
     color: #517abf;
     border-radius: 5px;
@@ -103,22 +117,75 @@ p {
 .result-box {
     width: 90%;
     min-width: 500px;
-    border: #ffffff solid 2px;
+    border: 1px solid gray;
+    border-top: none;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin: 0px 10px;
+    justify-content: space-around;
+    margin: 0px 50px;
+    box-sizing: border-box;
 }
 
-.result-box p {
-    margin: 2px;
+.result-box h3 {
+    margin: 2px 5px 0px;
+    font-size: 8pt;
+    font-weight: 600;
+    color: #517abf;
+}
+
+.page-result p {
+    margin: 0px 5px;
+    padding: 5px 0px;
     font-size: 10pt;
+    color: #174da9
+}
+
+.page-result p:hover,
+.page-result p:focus {
+    background-color: lightgray;
+    margin: 0px 0px;
+    padding: 5px 5px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.catch-all {
+    margin: 0px 5px;
+    padding: 5px 0px;
+    font-size: 10pt;
+    color: #174da9
+}
+
+.catch-all:hover,
+.catch-all p:focus {
+    background-color: lightgray;
+    margin: 0px 0px;
+    padding: 5px 5px;
+    cursor: pointer;
 }
 
 .page-result {
     height: 20px;
     background-color: #ffffff;
+}
+
+hr {
+    margin: 2px 2px 0px;
+    height: .1px;
+    border: 0 none;
+    background-color: gray;
+}
+
+.arrow {
+    font-size: 12pt;
+    color: black;
+    float: right;
+}
+
+.catch-all:hover .arrow {
+    transform: scale(1.07);
+    transition: font-size 0.15s;
 }

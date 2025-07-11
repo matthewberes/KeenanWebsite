@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
 import { Router } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
@@ -12,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 })
 export class HeaderComponent implements OnInit {
   constructor(private router: Router) { }
+
+  @ViewChild('searchInput') searchInput!: ElementRef<HTMLInputElement>;
 
   searchClicked = false;
   isEmpty = true;
@@ -33,6 +35,32 @@ export class HeaderComponent implements OnInit {
 
   onSearchClick() {
     this.searchClicked = true;
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => {
+      this.searchInput.nativeElement.focus();
+    }, 0);
+  }
+
+  closeSearch() {
+    this.searchClicked = false;
+    this.currText = "";
+    document.body.style.overflow = 'auto';
+  }
+
+  deleteInput() {
+    this.currText = "";
+  }
+
+  pageClick(page: string) {
+    this.router.navigate([this.pageMap.get(page)]);
+    this.currText = "";
+    this.closeSearch();
+  }
+
+  search() {
+    this.router.navigate(['/search', this.currText]);
+    this.currText = "";
+    this.closeSearch();
   }
 
   searchPages() {
