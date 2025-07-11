@@ -3,15 +3,21 @@
     flex-direction: column;
     justify-content: flex-start;
     height: 100%;
+    position: relative;
 }
 
 .headers {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    overflow-y: visible;
+    position: relative;
+    z-index: 2;
 }
 
 
 /* router-outlet {
     flex-grow: 2;
+    position: relative;
+    z-index: 1;
 } */

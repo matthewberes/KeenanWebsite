@@ -14,18 +14,33 @@
     </ng-container>
     <ng-container *ngIf="searchClicked">
         <div class="search-container">
-            <div class="search-box">
-                <input type="text" placeholder="Search">
-                <div class="buttons">
-                    <span class="material-symbols-outlined">
-                        cancel
-                    </span>
-                    <div class="vl"></div>
-                    <span class="material-symbols-outlined">
-                        search
-                    </span>
+            <div class="boxes">
+                <div class="search-box">
+                    <input type="text" id="search" [(ngModel)]="currText" placeholder="Search" (input)="searchPages()">
+                    <div class="buttons">
+                        <span class="material-symbols-outlined">
+                            cancel
+                        </span>
+                        <div class="vl"></div>
+                        <span class="material-symbols-outlined">
+                            search
+                        </span>
+                    </div>
+                </div>
+                <div class="result-box" [style.height.px]="35 + (pageResults.length * 35)">
+                    <ng-container *ngIf="pageResults.length > 0">
+                        <p>Pages</p>
+                        <ng-container *ngFor="let page of pageResults">
+                            <div class="page-result">
+                                <p>{{page}}</p>
+                            </div>
+                        </ng-container>
+                    </ng-container>
+                    <p>Search for "{{currText}}"</p>
                 </div>
             </div>
+
+
             <span class="material-symbols-outlined close">
                 close
             </span>

@@ -44,9 +44,15 @@ p {
 }
 
 .search-container {
-    margin: auto;
+    margin: 15px auto;
     width: 70%;
     display: flex;
+}
+
+.boxes {
+    width: 90%;
+    min-width: 500px;
+    border-radius: 5px;
 }
 
 .search-box {
@@ -57,7 +63,7 @@ p {
     font-size: 12pt;
     display: flex;
     height: 35px;
-    margin: 10px;
+    margin: 10px 10px 0px;
 }
 
 .search-box input {
@@ -94,7 +100,25 @@ p {
     height: 20px;
 }
 
-.results {
-    height: 305px;
-    background-color: aqua;
+.result-box {
+    width: 90%;
+    min-width: 500px;
+    border: #ffffff solid 2px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px 10px;
+}
+
+.result-box p {
+    margin: 2px;
+    font-size: 10pt;
+}
+
+.page-result {
+    height: 20px;
+    background-color: #ffffff;
 }
