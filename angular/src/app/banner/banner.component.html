@@ -1,15 +1,41 @@
 <div class="container">
     <div class="banner-container">
         <ng-container *ngIf="showBanner1">
-            <div class="banner 1"></div>
+            <div class="banner-1">
+                <div class="banner-1-inner">
+                    <h2>Painting</h2>
+                    <h3>Painting Dreams into Reality</h3>
+                    <button>Get In Touch!</button>
+                </div>
+            </div>
         </ng-container>
         <ng-container *ngIf="showBanner2">
-            <div class="banner 2"></div>
+            <div class="banner-2">
+                <div class="banner-2-inner">
+                    <h2>From Grass to Snow to Junk</h2>
+                    <h3>We Handle the Mess, So You Don't Stress.</h3>
+                    <button>Get In Touch!</button>
+                </div>
+            </div>
         </ng-container>
         <ng-container *ngIf="showBanner3">
-            <div class="banner 3"></div>
+            <div class="banner-3">
+                <div class="banner-3-inner">
+                    <h2>From Grass to Snow to Junk</h2>
+                    <h3>We Handle the Mess, So You Don't Stress.</h3>
+                    <button>Get In Touch!</button>
+                </div>
+            </div>
         </ng-container>
     </div>
-    <div class="arrows"></div>
-    <div class="footer"></div>
+    <div class="arrows">
+        <p>
+            <span tabindex="0" (click)="changeBanner('back')"
+                (keyup.enter)="changeBanner('back')">&lt;</span>&nbsp;&nbsp;&nbsp;{{currBanner}}/3&nbsp;&nbsp;&nbsp;<span
+                tabindex="0" (click)="changeBanner('next')" (keyup.enter)="changeBanner('next')">&gt;</span>
+        </p>
+    </div>
+    <div class="footer">
+        <p>Outstanding service | Exclusive pricing</p>
+    </div>
 </div>

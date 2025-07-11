@@ -25,6 +25,11 @@ img {
     margin: auto;
 }
 
+img:hover,
+img:focus {
+    cursor: pointer;
+}
+
 p {
     margin: 0;
 }

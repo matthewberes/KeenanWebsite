@@ -1,22 +1,167 @@
 .container {
-    height: 650px;
+    height: 630px;
 }
 
 .banner-container {
     height: 550px;
-    background-color: aqua;
 }
 
 .banner-1 {
-    background-image: url(/public/banner1.webp);
+    height: 550px;
+    background: url("/banner1.webp") no-repeat center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner-1-inner {
+    width: 450px;
+    height: 250px;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    background-color: #ffffff;
+}
+
+.banner-1 h2 {
+    font-size: 30pt;
+    color: #174da9;
+    text-align: center;
+}
+
+.banner-1 h3 {
+    font-size: 14pt;
+    color: #517abf;
+    text-align: center;
+}
+
+.banner-1 button {
+    display: block;
+    margin: 30px auto;
+    width: 150px;
+    height: 50px;
+    background-color: #dbd5d0;
+    border: none;
+    border-radius: 10px;
+    font-size: 12pt;
+}
+
+.banner-1 button:hover,
+.banner-1 button:focus {
+    cursor: pointer;
+    margin: 27.5px auto;
+    width: 155px;
+    height: 55px;
+}
+
+.banner-2 {
+    height: 550px;
+    background: url("/banner2.webp") no-repeat center center;
+}
+
+.banner-2-inner {
+    padding: 150px 80px;
+}
+
+.banner-2 h2 {
+    font-size: 30pt;
+    color: #174da9;
+    margin: 20px 0px;
+}
+
+.banner-2 h3 {
+    font-size: 14pt;
+    color: #517abf;
+    margin: 20px 0px;
+}
+
+.banner-2 button {
+    display: block;
+    margin: 30px 0px;
+    width: 150px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 12pt;
+}
+
+.banner-2 button:hover,
+.banner-2 button:focus {
+    cursor: pointer;
+    border: 3px solid black;
+}
+
+.banner-3 {
+    height: 550px;
+    background: url("/banner3.webp") no-repeat center center;
+}
+
+.banner-3-inner {
+    padding: 150px 80px;
+}
+
+.banner-3 h2 {
+    font-size: 30pt;
+    color: white;
+    margin: 20px 0px;
+}
+
+.banner-3 h3 {
+    font-size: 14pt;
+    color: white;
+    margin: 20px 0px;
+}
+
+.banner-3 button {
+    display: block;
+    margin: 30px 0px;
+    width: 150px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid white;
+    color: white;
+    border-radius: 10px;
+    font-size: 12pt;
+}
+
+.banner-3 button:hover,
+.banner-3 button:focus {
+    cursor: pointer;
+    border: 3px solid white;
 }
 
 .arrows {
-    height: 50px;
-    background-color: aquamarine;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.arrows p {
+    margin: 0;
+    text-align: center;
+    font-size: 10pt;
+    color: #517abf;
+}
+
+span:hover,
+span:focus {
+    cursor: pointer;
+    color: #174da9;
 }
 
 .footer {
-    height: 50px;
-    background-color: red;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #1c2228;
+    color: #ffffff;
+}
+
+.footer p {
+    margin: 0;
+    text-align: center;
+    font-size: 12pt;
 }
