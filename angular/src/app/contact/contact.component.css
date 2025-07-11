@@ -1,0 +1,23 @@
+.container {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+}
+
+h1 {
+    font-size: 40pt;
+    color: #174da9;
+}
+
+h2 {
+    color: #174da9;
+}
+
+p {
+    font-size: 14pt;
+    color: #517abf;
+}
+
+hr {
+    margin: 5% 1%;
+}
