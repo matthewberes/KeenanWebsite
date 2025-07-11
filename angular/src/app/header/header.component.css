@@ -15,8 +15,17 @@ app-toolbar {
     margin: auto;
 }
 
-app-search-button {
+.material-symbols-outlined {
+    font-size: 20pt;
+    margin: auto;
+    color: #517abf;
     margin: auto 0;
+}
+
+.material-symbols-outlined:hover,
+.material-symbols-outlined:focus {
+    cursor: pointer;
+    font-size: 21pt;
 }
 
 img {
@@ -32,4 +41,60 @@ img:focus {
 
 p {
     margin: 0;
+}
+
+.search-container {
+    margin: auto;
+    width: 70%;
+    display: flex;
+}
+
+.search-box {
+    width: 90%;
+    min-width: 500px;
+    border-radius: 5px;
+    border: #517abf solid 2px;
+    font-size: 12pt;
+    display: flex;
+    height: 35px;
+    margin: 10px;
+}
+
+.search-box input {
+    width: 90%;
+    border: none;
+    color: #517abf;
+    border-radius: 5px;
+}
+
+.search-box input:focus {
+    outline: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 9%;
+    margin: 1%;
+}
+
+.buttons span {
+    font-size: 14pt;
+    transition: transform 0.15s;
+    display: inline-block;
+}
+
+.buttons span:hover {
+    transform: scale(1.07);
+}
+
+.vl {
+    margin: auto;
+    border-left: 1px solid gray;
+    height: 20px;
+}
+
+.results {
+    height: 305px;
+    background-color: aqua;
 }

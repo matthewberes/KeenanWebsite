@@ -1,7 +1,34 @@
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
 <div class="container">
-    <div class="left-side">
-        <img src="logo.avif" alt="Logo" tabindex="0" (click)="onClick()" (keyup.enter)="onClick()">
-        <app-toolbar></app-toolbar>
-    </div>
-    <app-search-button></app-search-button>
+    <ng-container *ngIf="!searchClicked">
+        <div class="left-side">
+            <img src="logo.avif" alt="Logo" tabindex="0" (click)="onClick()" (keyup.enter)="onClick()">
+            <app-toolbar></app-toolbar>
+        </div>
+        <span class="material-symbols-outlined" tabindex="0" (click)="onSearchClick()" (keyup.enter)="onSearchClick()">
+            search
+        </span>
+    </ng-container>
+    <ng-container *ngIf="searchClicked">
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" placeholder="Search">
+                <div class="buttons">
+                    <span class="material-symbols-outlined">
+                        cancel
+                    </span>
+                    <div class="vl"></div>
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+                </div>
+            </div>
+            <span class="material-symbols-outlined close">
+                close
+            </span>
+        </div>
+    </ng-container>
 </div>
