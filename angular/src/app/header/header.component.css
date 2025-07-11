@@ -1,0 +1,30 @@
+.container {
+    height: 90px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+.left-side {
+    display: flex;
+}
+
+app-toolbar {
+    margin: auto;
+}
+
+app-search-button {
+    margin: auto 0;
+}
+
+img {
+    width: auto;
+    height: 60px;
+    margin: auto;
+}
+
+p {
+    margin: 0;
+}

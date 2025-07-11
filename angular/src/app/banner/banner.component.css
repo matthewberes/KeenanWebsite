@@ -1,0 +1,22 @@
+.container {
+    height: 650px;
+}
+
+.banner-container {
+    height: 550px;
+    background-color: aqua;
+}
+
+.banner-1 {
+    background-image: url(/public/banner1.webp);
+}
+
+.arrows {
+    height: 50px;
+    background-color: aquamarine;
+}
+
+.footer {
+    height: 50px;
+    background-color: red;
+}

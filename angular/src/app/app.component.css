@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.headers {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+/* router-outlet {
+    flex-grow: 2;
+} */

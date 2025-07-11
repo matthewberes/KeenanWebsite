@@ -1,0 +1,10 @@
+<div class="container">
+    <p tabindex="0" [ngClass]="{'selected': path == '/home'}" (click)="onClick('home')" (keyup.enter)="onClick('home')">
+        Home</p>
+    <p tabindex="0" [ngClass]="{'selected': path == '/contact'}" (click)="onClick('contact')"
+        (keyup.enter)="onClick('contact')">Contact</p>
+    <p tabindex="0" [ngClass]="{'selected': path == '/about'}" (click)="onClick('about')"
+        (keyup.enter)="onClick('about')">About Us</p>
+    <p tabindex="0" [ngClass]="{'selected': path == '/gallery'}" (click)="onClick('gallery')"
+        (keyup.enter)="onClick('gallery')">Gallery</p>
+</div>

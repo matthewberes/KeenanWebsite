@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30px;
+    width: 270px;
+}
+
+p {
+    font-size: 10pt;
+    color: #517abf;
+}
+
+.selected {
+    color: #174da9;
+    text-decoration: underline;
+}
+
+p:hover,
+p:focus {
+    cursor: pointer;
+    color: #174da9;
+    text-decoration: underline;
+}

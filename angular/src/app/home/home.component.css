@@ -1,0 +1,115 @@
+.container {
+    background-color: blueviolet;
+}
+
+p {
+    margin: 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.snow,
+.lawn {
+    background-color: #bab0a5;
+}
+
+.junk,
+.paint {
+    background-color: #1c2228;
+}
+
+.inner-card {
+    display: flex;
+    flex-direction: row;
+    margin: 50px auto;
+    width: 90%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    height: auto;
+}
+
+.inner-card img {
+    margin: 1px;
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.left-image {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.right-image {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.inner-text {
+    width: 50%;
+    margin: 30px;
+    color: #517abf;
+}
+
+.inner-text h2 {
+    font-size: 32pt;
+    color: #174da9;
+}
+
+.inner-text strong {
+    color: #174da9;
+}
+
+.inner-text li {
+    font-size: 14pt;
+    margin: 5px;
+}
+
+.inner-text p {
+    font-size: 14pt;
+}
+
+.inner-text h3 {
+    font-size: 16pt;
+    color: #174da9;
+}
+
+button {
+    color: black;
+    text-align: center;
+    background-color: #bab0a5;
+    width: 130px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+}
+
+button:hover,
+button:focus {
+    cursor: pointer;
+    background-color: #cfc7bf;
+}
+
+.fake-header {
+    margin: 20px 0px;
+}
+
+@media (max-width: 900px) {
+    .inner-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inner-card img,
+    .inner-text {
+        width: 100%;
+        min-width: 0;
+        margin: 10px 0;
+    }
+}
