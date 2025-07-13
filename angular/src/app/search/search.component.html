@@ -1,1 +1,28 @@
-<p>search works!</p>
+<h2>Search Results</h2>
+<div class="search-container">
+    <div class="boxes">
+        <div class="search-box">
+            <input #searchInput type="text" id="searchInput" [(ngModel)]="currText" placeholder="Search"
+                (input)="searchPages()">
+            <div class="buttons">
+                <span class="material-symbols-outlined" (click)="deleteInput()" (keyup.enter)="deleteInput()">
+                    cancel
+                </span>
+                <div class="vl"></div>
+                <span class="material-symbols-outlined" (click)="search()" (keyup.enter)="search()">
+                    search
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-container *ngIf="currText != ''">
+    <div class="result-container">
+        <ng-container *ngFor="let page of pageResults">
+            <div class="page-result" (click)="pageClick(page)" (keyup.enter)="pageClick(page)">
+                <p>{{page}}</p>
+                <hr>
+            </div>
+        </ng-container>
+    </div>
+</ng-container>
