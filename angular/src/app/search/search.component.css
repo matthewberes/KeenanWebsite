@@ -113,3 +113,32 @@ hr {
 .no-results {
     color: #517abf;
 }
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .search-container {
+        width: 90%;
+        min-width: 300px;
+        justify-content: space-between;
+    }
+
+    .boxes {
+        width: 90%;
+        min-width: 300px;
+    }
+
+    .search-box {
+        width: 90%;
+        min-width: 300px;
+    }
+
+    .result-box {
+        width: 90%;
+        min-width: 300px;
+    }
+
+}

@@ -48,6 +48,7 @@ p {
     top: 130px;
     left: 0;
     width: 100vw;
+    min-width: 600px;
     height: calc(100vh - 130px);
     background: rgba(81, 122, 191, 0.4);
     z-index: 1000;
@@ -60,7 +61,6 @@ p {
     min-width: 650px;
     max-width: 1300px;
     display: flex;
-
 }
 
 .boxes {
@@ -206,16 +206,25 @@ hr {
     .search-container {
         width: 90%;
         min-width: 300px;
+        justify-content: space-between;
     }
 
     .boxes {
-        width: 100%;
+        width: 90%;
         min-width: 300px;
     }
 
     .search-box {
-        width: 100%;
+        width: 90%;
         min-width: 300px;
     }
 
+    .result-box {
+        width: 90%;
+        min-width: 300px;
+    }
+
+    .search-overlay {
+        height: 100%
+    }
 }
