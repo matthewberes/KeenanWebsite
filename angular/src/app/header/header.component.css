@@ -196,3 +196,26 @@ hr {
     transform: scale(1.07);
     transition: font-size 0.15s;
 }
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .search-container {
+        width: 90%;
+        min-width: 300px;
+    }
+
+    .boxes {
+        width: 100%;
+        min-width: 300px;
+    }
+
+    .search-box {
+        width: 100%;
+        min-width: 300px;
+    }
+
+}
