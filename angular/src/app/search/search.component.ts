@@ -1,7 +1,8 @@
 import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-search',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
   styleUrl: './search.component.css'
 })
 export class SearchComponent {
-  constructor(private router: Router) { }
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   @ViewChild('searchInput') searchInput!: ElementRef<HTMLInputElement>;
 
@@ -20,12 +21,19 @@ export class SearchComponent {
   pages = ["Home", "Contact Us", "About Us", "Gallery"];
   pageMap: Map<string, string> = new Map<string, string>();
   pageResults: string[] = [];
+  path: string = "";
 
   ngOnInit(): void {
     this.pageMap.set("Home", "/home");
     this.pageMap.set("Contact Us", "/contact");
     this.pageMap.set("About Us", "/about");
     this.pageMap.set("Gallery", "/gallery");
+
+    this.path = this.route.snapshot.paramMap.get('value') || "";
+    if (this.path != "") {
+      this.currText = this.path;
+      this.searchPages()
+    }
   }
 
   closeSearch() {
@@ -56,5 +64,9 @@ export class SearchComponent {
       page.toLowerCase().includes(query)
     );
     console.log(this.pageResults)
+  }
+
+  isLast(page: string) {
+    return this.pageResults.indexOf(page) == this.pageResults.length - 1;
   }
 }

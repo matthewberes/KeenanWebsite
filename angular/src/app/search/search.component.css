@@ -10,11 +10,10 @@ h2 {
 }
 
 .search-container {
-    z-index: 1001;
     margin: 20px auto;
     width: 70%;
     display: flex;
-
+    flex-wrap: wrap;
 }
 
 .boxes {
@@ -24,19 +23,21 @@ h2 {
 }
 
 .search-box {
-    width: 90%;
+    width: 100%;
     min-width: 500px;
     border-radius: 5px;
     border: #517abf solid 2px;
     font-size: 12pt;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 35px;
-    margin: 8px 50px 0px;
+    margin: 8px 55px 0px;
     box-sizing: border-box;
 }
 
 .search-box input {
-    width: 90%;
+    width: 93%;
     margin: 0px 0px 0px 3px;
     border: none;
     color: #517abf;
@@ -49,13 +50,16 @@ h2 {
 
 .buttons {
     display: flex;
-    justify-content: space-around;
-    width: 9%;
-    margin: 1%;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    margin: 0 8px;
 }
 
 .buttons span {
-    font-size: 14pt;
+    font-size: 18pt;
     transition: transform 0.15s;
     display: inline-block;
 }
@@ -71,9 +75,13 @@ h2 {
     height: 18px;
 }
 
+h3 {
+    margin: 5px 5px;
+    color: #174da9;
+}
+
 .page-result p {
     margin: 0px 5px;
-    padding: 0px 0px;
     font-size: 10pt;
     color: #174da9
 }
@@ -85,21 +93,6 @@ h2 {
     text-decoration: underline;
 }
 
-.catch-all {
-    margin: 0px 5px;
-    padding: 5px 0px;
-    font-size: 10pt;
-    color: #174da9
-}
-
-.catch-all:hover,
-.catch-all p:focus {
-    background-color: lightgray;
-    margin: 0px 0px;
-    padding: 5px 5px;
-    cursor: pointer;
-}
-
 .page-result {
     height: 40px;
     background-color: #ffffff;
@@ -109,11 +102,14 @@ h2 {
 
 hr {
     margin: 2px 2px 0px;
-    height: .1px;
-    border: 0 none;
     background-color: gray;
 }
 
 .result-container {
-    margin: 0px 150px;
+    margin: 20px auto;
+    flex-basis: 100%;
+}
+
+.no-results {
+    color: #517abf;
 }

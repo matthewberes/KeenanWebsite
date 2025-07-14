@@ -5,24 +5,35 @@
             <input #searchInput type="text" id="searchInput" [(ngModel)]="currText" placeholder="Search"
                 (input)="searchPages()">
             <div class="buttons">
-                <span class="material-symbols-outlined" (click)="deleteInput()" (keyup.enter)="deleteInput()">
+                <span class="material-symbols-outlined" (click)="deleteInput()" (keyup.enter)="deleteInput()"
+                    tabindex="0">
                     cancel
                 </span>
                 <div class="vl"></div>
-                <span class="material-symbols-outlined" (click)="search()" (keyup.enter)="search()">
+                <span class="material-symbols-outlined" (click)="search()" (keyup.enter)="search()" tabindex="0">
                     search
                 </span>
             </div>
         </div>
     </div>
-</div>
-<ng-container *ngIf="currText != ''">
-    <div class="result-container">
-        <ng-container *ngFor="let page of pageResults">
-            <div class="page-result" (click)="pageClick(page)" (keyup.enter)="pageClick(page)">
-                <p>{{page}}</p>
+    <ng-container *ngIf="currText != ''">
+        <div class="result-container">
+            <ng-container *ngIf="pageResults.length > 0">
+                <h3>Pages</h3>
                 <hr>
-            </div>
-        </ng-container>
-    </div>
-</ng-container>
+            </ng-container>
+            <ng-container *ngFor="let page of pageResults">
+                <div class="page-result" (click)="pageClick(page)" (keyup.enter)="pageClick(page)" tabindex="0">
+                    <p>{{page}}</p>
+                </div>
+                <ng-container *ngIf="isLast(page) == false">
+                    <hr />
+                </ng-container>
+            </ng-container>
+            <ng-container *ngIf="pageResults.length == 0 && currText != ''">
+                <p class="no-results">No results found for “{{currText}}”. Check the spelling or use a different word or
+                    phrase.</p>
+            </ng-container>
+        </div>
+    </ng-container>
+</div>

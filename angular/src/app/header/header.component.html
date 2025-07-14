@@ -20,11 +20,13 @@
                     <input #searchInput type="text" id="searchInput" [(ngModel)]="currText" placeholder="Search"
                         (input)="searchPages()">
                     <div class="buttons">
-                        <span class="material-symbols-outlined" (click)="deleteInput()" (keyup.enter)="deleteInput()">
+                        <span class="material-symbols-outlined" (click)="deleteInput()" (keyup.enter)="deleteInput()"
+                            tabindex="0">
                             cancel
                         </span>
                         <div class="vl"></div>
-                        <span class="material-symbols-outlined" (click)="search()" (keyup.enter)="search()">
+                        <span class="material-symbols-outlined" (click)="search()" (keyup.enter)="search()"
+                            tabindex="0">
                             search
                         </span>
                     </div>
@@ -35,20 +37,21 @@
                             <h3>Pages</h3>
                             <hr>
                             <ng-container *ngFor="let page of pageResults">
-                                <div class="page-result" (click)="pageClick(page)" (keyup.enter)="pageClick(page)">
+                                <div class="page-result" (click)="pageClick(page)" (keyup.enter)="pageClick(page)"
+                                    tabindex="0">
                                     <p>{{page}}</p>
                                 </div>
                             </ng-container>
                             <hr class="end">
                         </ng-container>
-                        <p class="catch-all" (click)="search()" (keyup.enter)="search()">Search for "{{currText}}" <span
-                                class="material-symbols-outlined arrow">
+                        <p class="catch-all" (click)="search()" (keyup.enter)="search()" tabindex="0">Search for
+                            "{{currText}}" <span class="material-symbols-outlined arrow">
                                 arrow_forward
                             </span></p>
                     </div>
                 </ng-container>
             </div>
-            <span class="material-symbols-outlined" (click)="closeSearch()" (keyup.enter)="closeSearch()">
+            <span class="material-symbols-outlined" (click)="closeSearch()" (keyup.enter)="closeSearch()" tabindex="0">
                 close
             </span>
         </div>

@@ -57,6 +57,8 @@ p {
     z-index: 1001;
     margin: 20px auto;
     width: 70%;
+    min-width: 650px;
+    max-width: 1300px;
     display: flex;
 
 }
@@ -74,6 +76,8 @@ p {
     border: #517abf solid 2px;
     font-size: 12pt;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 35px;
     margin: 8px 50px 0px;
     box-sizing: border-box;
@@ -93,13 +97,16 @@ p {
 
 .buttons {
     display: flex;
-    justify-content: space-around;
-    width: 9%;
-    margin: 1%;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    margin: 0 8px;
 }
 
 .buttons span {
-    font-size: 14pt;
+    font-size: 18pt;
     transition: transform 0.15s;
     display: inline-block;
 }
@@ -138,7 +145,7 @@ p {
 
 .page-result p {
     margin: 0px 5px;
-    padding: 5px 0px;
+    padding: 5px 0px 0px;
     font-size: 10pt;
     color: #174da9
 }
