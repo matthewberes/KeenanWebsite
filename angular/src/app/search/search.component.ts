@@ -53,6 +53,9 @@ export class SearchComponent {
   }
 
   search() {
+    if (this.currText.trim() == "") {
+      return;
+    }
     this.router.navigate(['/search', this.currText]);
   }
 
