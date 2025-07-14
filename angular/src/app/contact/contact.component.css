@@ -21,3 +21,9 @@ p {
 hr {
     margin: 5% 1%;
 }
+
+@media screen and (max-width: 600px) {
+    .container {
+        height: 185%;
+    }
+}

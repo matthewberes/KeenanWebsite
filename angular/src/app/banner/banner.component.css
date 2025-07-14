@@ -8,7 +8,7 @@
 
 .banner-1 {
     height: 550px;
-    background: url("/banner1.webp") no-repeat center center;
+    background: url("../../../public/banner1.webp") no-repeat center center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,7 +56,7 @@
 
 .banner-2 {
     height: 550px;
-    background: url("/banner2.webp") no-repeat center center;
+    background: url("../../../public/banner2.webp") no-repeat center center;
 }
 
 .banner-2-inner {
@@ -94,7 +94,7 @@
 
 .banner-3 {
     height: 550px;
-    background: url("/banner3.webp") no-repeat center center;
+    background: url("../../../public/banner3.webp") no-repeat center center;
 }
 
 .banner-3-inner {
