@@ -209,6 +209,10 @@ hr {
         justify-content: space-between;
     }
 
+    .search-box input {
+        font-size: 16px;
+    }
+
     .boxes {
         width: 90%;
         min-width: 300px;
