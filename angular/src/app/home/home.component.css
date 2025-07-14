@@ -12,13 +12,13 @@ p {
     height: auto;
 }
 
-.snow,
+.paint,
 .lawn {
     background-color: #bab0a5;
 }
 
 .junk,
-.paint {
+.snow {
     background-color: #1c2228;
 }
 
