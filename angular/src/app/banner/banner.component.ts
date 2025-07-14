@@ -1,5 +1,6 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-banner',
@@ -8,6 +9,8 @@ import { Component } from '@angular/core';
   styleUrl: './banner.component.css'
 })
 export class BannerComponent {
+  constructor(private router: Router) { }
+
   showBanner1 = true;
   showBanner2 = false;
   showBanner3 = false;
@@ -68,5 +71,9 @@ export class BannerComponent {
       this.changeBanner('back');
       setTimeout(() => this.isChangingBanner = false, 400);
     }
+  }
+
+  onClick() {
+    this.router.navigate(['/contact']);
   }
 }

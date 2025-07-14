@@ -54,8 +54,6 @@ export class SearchComponent {
 
   search() {
     this.router.navigate(['/search', this.currText]);
-    this.currText = "";
-    this.closeSearch();
   }
 
   searchPages() {
